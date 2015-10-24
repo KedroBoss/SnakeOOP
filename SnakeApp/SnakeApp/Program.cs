@@ -40,10 +40,16 @@ namespace SnakeApp
                 Console.WriteLine(sym);
             }*/
 
+            Console.SetBufferSize(80, 25);
+            int consoleWidth = Console.WindowWidth;
+            int consoleHeight = Console.WindowHeight;
 
-            HorizontalWall Hline = new HorizontalWall(5, 25, 5, '#');
-            VerticalWall Vline = new VerticalWall(5, 25, 5, '#');
-            Hline.Draw(); Vline.Draw();
+            HorizontalWall UHline = new HorizontalWall(consoleWidth - consoleWidth + 2, consoleWidth - 2, consoleHeight - consoleHeight+2, '#');
+            HorizontalWall DHline = new HorizontalWall(consoleWidth - consoleWidth + 2, consoleWidth - 2, consoleHeight - 2, '#');
+            VerticalWall LVline = new VerticalWall(consoleHeight - consoleHeight + 2, consoleHeight - 2, consoleWidth - consoleWidth + 2, '#');
+            VerticalWall RVline = new VerticalWall(consoleHeight - consoleHeight + 2, consoleHeight - 2, consoleWidth - 2 , '#');
+            UHline.Draw(); LVline.Draw();
+            DHline.Draw(); RVline.Draw();
 
 
             Console.ReadKey();

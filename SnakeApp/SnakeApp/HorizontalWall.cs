@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace SnakeApp
 {
-    class HorizontalWall
+    class HorizontalWall : Level
     {
-        List<Point> pointList;
+ 
         
         public HorizontalWall(int xLeft, int xRight, int y, char sym)
         {
@@ -21,13 +21,7 @@ namespace SnakeApp
             }
         }
 
-        public void Draw()
-        {
-            foreach(Point p in pointList)
-            {
-                p.Draw();
-            }
-        }
+      
 
     }
 }

@@ -10,30 +10,18 @@ namespace SnakeApp
     {
         static void Main(string[] args)
         {
-            Point p1 = new Point();
-            p1.x = 1;
-            p1.y = 3;
-            p1.sym = '*';
+            /* Point p1 = new Point(1, 3, '*');
+             Point p2 = new Point(3, 5, '#');*/
 
-            p1.Draw(p1.x, p1.y, p1.sym);
+            /* List<Point> pointList = new List<Point>(); //Через массив точек*/
+            /* List<char> symList = new List<char>(); //Через массив символов*/
 
-
-            Point p2 = new Point();
-            p2.x = 3;
-            p2.y = 5;
-            p2.sym = '#';
-
-            p1.Draw(p2.x, p2.y, p2.sym);
-
-            List<Point> pointList = new List<Point>();
-            List<char> symList = new List<char>();
-
-            pointList.Add(p1);
-            pointList.Add(p2);
-
-            foreach(Point p in pointList)
+            /* pointList.Add(p1);
+             pointList.Add(p2);
+             */
+            /*foreach(Point p in pointList)
             {
-                Console.WriteLine(p.sym);
+                p.Draw();
             }
 
             /*for(int i = 0; i < pointList.Count; i++)
@@ -51,6 +39,11 @@ namespace SnakeApp
             {
                 Console.WriteLine(sym);
             }*/
+
+
+            HorizontalWall Hline = new HorizontalWall(5, 25, 5, '#');
+            VerticalWall Vline = new VerticalWall(5, 25, 5, '#');
+            Hline.Draw(); Vline.Draw();
 
 
             Console.ReadKey();

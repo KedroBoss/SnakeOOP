@@ -10,14 +10,16 @@ namespace SnakeApp
     {
         static void Main(string[] args)
         {
-            int x1 = 1;
-            int y1 = 3;
-            char sym1 = '*';
+            Point p1 = new Point();
+            p1.x = 1;
+            p1.y = 3;
+            p1.sym = '*';
 
-            Console.SetCursorPosition(x1, y1);
-            Console.WriteLine(sym1);
+            p1.Draw(p1.x, p1.y, p1.sym);
 
             Console.ReadKey();
         }
+
+        
     }
 }
